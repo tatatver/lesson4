@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькуляторы</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+<div class="calc">
+    <h2>Калькулятор площади прямоугольника </h2>
+    <label for="a"> 
+        a=
+        <input type="number" name="a">
+    </label>
+    <label for="b"> 
+        b=
+        <input type="number" name="b">
+    </label>
+    <button onclick="Squar()">Посчитать</button>
+
+    <div id="result"> </div>
+</div>
+
+<div class="courseSale">
+    <h2>Калькулятор стоимости обучения</h2>
+    <label for=""> 
+        Курс:
+        <select name="" id="courseName" oninput="courseSale()">
+            <option value="">Выберете курс</option>
+            <option value="py">Python</option>
+            <option value="fr">Frontend</option>
+            <option value="ux">UX/UI</option>
+        </select>
+    
+        <label for="">
+            Скидка:
+            <input type="range" min="0" max="50" step="5" value="0" oninput="courseSale()" id="discountRange">
+            <span id="discountValue">0%</span>
+        </label>
+        <label for="">
+            Сумма:
+            <input type="text" name="" id="sale" readonly>
+        </label>
+    </label>
+</div>
+
+<div class="registration">
+
+    <h2>Оставить заявку</h2>
+    <form action="">
+    <label for="">
+        Имя: 
+        <input type="text" name="" id="name" oninput="Send()" required>
+    </label>
+    <label for="">
+        Страна:
+        <select name="" id="code" oninput="tel()" oninput="Send()">
+            <option value=""> </option> 
+            <option value="Uz">Узбекистан</option>
+            <option value="Kz">Казахстан</option>
+            <option value="Us">США</option>
+        </select>
+    </label>
+    <label for="">
+        Телефон:
+        <input type="tel" id="codeNumber" maxlength="13" oninput="Send()" required>
+    </label>
+    <label for="">
+        <input type="checkbox" id="agree" onclick="Send()" required>
+        Подтвердите обработку данных
+    </label>
+    <input type="submit" id="buttonSend" disabled oninput="Send()" value="Отправить">
+    </form>
+    <script src="./main.js"></script>
+</div>
+</body>
+</html>
